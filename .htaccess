@@ -1,0 +1,70 @@
+# Archivo de configuración .htaccess para Suibaku
+
+# Habilitar reescritura de URLs
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /BBS/
+    
+    # Redirigir a bbs.php si se solicita bbs.html y no existe
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^bbs\.html$ bbs.php [L]
+    
+    # Redirigir la raíz a bbs.php si no hay archivos
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^$ bbs.php [L]
+</IfModule>
+
+# Proteger archivos .dat
+<FilesMatch "\.(dat|lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger archivos de configuración
+<FilesMatch "^(README\.md|\.gitignore|\.htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Configuración de seguridad
+<IfModule mod_headers.c>
+    # Prevenir clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevenir MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Límites de tamaño de subida
+php_value upload_max_filesize 5M
+php_value post_max_size 6M
+php_value max_execution_time 30
+php_value max_input_time 30
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Configuración de errores personalizados
+ErrorDocument 403 /BBS/bbs.html
+ErrorDocument 404 /BBS/bbs.html
+
+# Comprimir contenido
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Cache para archivos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

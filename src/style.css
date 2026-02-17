@@ -1,0 +1,390 @@
+/* Estilos para Suibaku */
+@import "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to bottom, #aaa2d8 0, #eeebff 260px) no-repeat;
+	background-color: #eeebff;
+	padding: 10px;
+	line-height: 1.5;
+	font-size: 12pt;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+	margin: 10px 0;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+
+hr {
+	margin: 5px 0;
+	border: none;
+	border-top: 1px solid #ccc;
+}
+
+/* Contenedor principal */
+.wrapper {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 12px;
+}
+
+.logo {
+	text-align: center;
+	font-size: 35px;
+	font-weight: 800;
+	color: #231b3a;
+	margin-bottom: 14px;
+}
+
+.welcome {
+	border: 2px solid #231b3a;
+	border-radius: 3px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.welcome h3 {
+	margin: 0;
+	padding: 3px 15px;
+	background: #231b3a;
+	color: #fff;
+}
+
+.welcome .body {
+	padding: 12px;
+	line-height: 1.5;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.card {
+	border: 2px solid #231b3a;
+	border-radius: 3px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.card h3 {
+	margin: 0;
+	padding: 3px 15px;
+	color: #fff;
+	background: #231b3a;
+}
+
+.card .content {
+	padding: 10px;
+}
+
+.recent-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+}
+
+.recent-item {
+	text-align: center;
+}
+
+.recent-item img {
+	max-width: 100%;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.recent-item a {
+	text-decoration: none;
+	color: #231b3a;
+	font-weight: 700;
+	font-size: 13px;
+}
+
+.board-link {
+	font-size: 30px;
+	font-weight: 800;
+	color: #231b3a;
+	text-decoration: none;
+}
+
+.note {
+	margin-top: 10px;
+	color: #941b1b;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.stats {
+	line-height: 1.7;
+	font-size: 15px;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 12px;
+	color: #231b3a;
+	margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+
+	.recent-list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.logo {
+		font-size: 42px;
+	}
+
+	.welcome h2 {
+		font-size: 20px;
+	}
+
+	.board-link {
+		font-size: 28px;
+	}
+}
+
+/* Formulario de post */
+form table {
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+form table td {
+	padding: 0 5px;
+}
+
+form table td:nth-child(1) {
+	border: 1px solid #7a6aa8;
+}
+
+form table td:nth-child(2) {
+	padding: 1px 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #aaa;
+	font-family: inherit;
+}
+
+form textarea {
+	padding: 5px;
+	border: 1px solid #aaa;
+	font-family: inherit;
+	resize: vertical;
+}
+
+form input[type="file"] {
+	font-size: 0.8em;
+}
+
+form input[type="submit"] {
+	width: 100%;
+	padding: 4px 10px;
+	background: #ddd;
+	border: 1px solid #999;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+form input[type="submit"]:hover {
+	background: #ccc;
+}
+
+/* Posts */
+.post-content {
+	margin-bottom: 5px;
+	border-radius: 3px;
+	overflow: auto;
+	padding: 5px 10px;
+}
+
+.reply-content {
+	background: #d4cff0;
+}
+
+.reply-float {
+	width: max-content;
+}
+
+.post-header {
+	margin-bottom: 3px;
+}
+
+.post-fileinfo {
+	font-size: 0.95em;
+	margin-bottom: 4px;
+}
+
+.post-image {
+	float: left;
+	margin-right: 5px;
+}
+
+.post-image img {
+	max-width: 225px;
+	max-height: 225px;
+	border: 1px solid #ccc;
+}
+
+.post-comment {
+	margin-top: 3px;
+}
+
+/* Links */
+a {
+	color: #4b2e83;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Botones */
+button {
+	padding: 5px 10px;
+	background: #ddd;
+	border: 1px solid #999;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 0.9em;
+}
+
+button:hover {
+	background: #ccc;
+}
+
+/* Tablas de paginación */
+table[align="left"],
+table[align="center"] {
+	margin: 10px auto;
+}
+
+table[align="left"] td,
+table[align="center"] td {
+	padding: 5px 10px;
+}
+
+/* Panel de administración */
+table[border="1"] {
+	border-collapse: collapse;
+	font-size: 11pt;
+}
+
+table[border="1"] th,
+table[border="1"] td {
+	border: 1px solid #999;
+	padding: 3px 5px;
+	text-align: left;
+}
+
+table[border="1"] th {
+	background-color: #aaa2d8;
+	color: #231b3a;
+}
+
+table[border="1"] button {
+	margin: 2px 0;
+	width: 100%;
+}
+
+/* Lista de reglas */
+ul {
+	list-style-position: inside;
+}
+
+ul li {
+	margin: 3px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	body {
+		padding: 5px;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	form table {
+		width: 100%;
+	}
+
+	form input[type="text"],
+    form input[type="email"],
+    form textarea {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.post-image {
+		float: none;
+		display: block;
+		margin: 5px 0;
+	}
+
+	.reply-float {
+		float: none;
+		width: 100%;
+		margin: 6px 0;
+	}
+
+	table[border="1"] {
+		font-size: 9pt;
+		width: 100%;
+		overflow-x: auto;
+		display: block;
+	}
+}
+
+/* Centrado */
+center {
+	text-align: center;
+}
+
+/* Estilos adicionales para mejorar la experiencia */
+.error-message {
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #ffe6e6;
+	border: 1px solid #ff4444;
+	border-radius: 3px;
+}
+
+.success-message {
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #e6ffe6;
+	border: 1px solid #44ff44;
+	border-radius: 3px;
+}
+
+/* Footer */
+small {
+	color: #666;
+}

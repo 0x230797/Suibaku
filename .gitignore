@@ -1,0 +1,28 @@
+# Ignorar archivos de datos
+*.dat
+
+# Ignorar archivos generados
+*.html
+
+# Ignorar directorio de uploads (pero mantener la carpeta)
+uploads/*
+!uploads/.gitkeep
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar archivos de configuración local
+config.local.php
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de respaldo
+*.bak
+*~
+
+# Ignorar archivos temporales
+tmp/
+temp/
