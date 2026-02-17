@@ -10,18 +10,18 @@ Estas son las imágenes incluidas en `samples/`:
 <table>
    <tr>
       <td align="center">
-         <a href="samples/01.png"><img src="samples/01.png" alt="Ejemplo 01" width="220"></a>
+         <a href="samples/01.png"><img src="samples/01.png" alt="Ejemplo 01" width="400"></a>
       </td>
       <td align="center">
-         <a href="samples/02.png"><img src="samples/02.png" alt="Ejemplo 02" width="220"></a>
+         <a href="samples/02.png"><img src="samples/02.png" alt="Ejemplo 02" width="400"></a>
       </td>
    </tr>
    <tr>
       <td align="center">
-         <a href="samples/03.png"><img src="samples/03.png" alt="Ejemplo 03" width="220"></a>
+         <a href="samples/03.png"><img src="samples/03.png" alt="Ejemplo 03" width="400"></a>
       </td>
       <td align="center">
-         <a href="samples/04.png"><img src="samples/04.png" alt="Ejemplo 04" width="220"></a>
+         <a href="samples/04.png"><img src="samples/04.png" alt="Ejemplo 04" width="400"></a>
       </td>
    </tr>
 </table>
